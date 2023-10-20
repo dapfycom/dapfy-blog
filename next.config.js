@@ -77,14 +77,7 @@ module.exports = () => {
         },
       ]
     },
-    async rewrites() {
-      return [
-        {
-          source: '/',
-          destination: '/blog',
-        },
-      ]
-    },
+
     webpack: (config, options) => {
       config.module.rules.push({
         test: /\.svg$/,
