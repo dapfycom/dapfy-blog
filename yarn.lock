@@ -2355,6 +2355,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@next/font@npm:^13.5.6":
+  version: 13.5.6
+  resolution: "@next/font@npm:13.5.6"
+  checksum: 12aa997147094bb122e2e22b29a2f6c1872de37fca0b444f20aa5c48e20bd8176c7d8661c1c597a43d528c7dc75d3acc44bc08c47aa716a5ab450fca68e4c814
+  languageName: node
+  linkType: hard
+
 "@next/swc-darwin-arm64@npm:13.5.3":
   version: 13.5.3
   resolution: "@next/swc-darwin-arm64@npm:13.5.3"
@@ -5868,6 +5875,15 @@ __metadata:
     strip-ansi: ^6.0.1
     wide-align: ^1.1.5
   checksum: 788b6bfe52f1dd8e263cda800c26ac0ca2ff6de0b6eee2fe0d9e3abf15e149b651bd27bf5226be10e6e3edb5c4e5d5985a5a1a98137e7a892f75eff76467ad2d
+  languageName: node
+  linkType: hard
+
+"geist@npm:^1.0.0":
+  version: 1.0.0
+  resolution: "geist@npm:1.0.0"
+  dependencies:
+    "@next/font": ^13.5.6
+  checksum: 00ab8fc8de02b405bf969398b70423a1f2c8ec93eeddffacd42ef8cf39ae47fe1a97c232d7b55b92d52abc8f17b835eaf2cd407e146e45da7202d9e58fa05630
   languageName: node
   linkType: hard
 
@@ -11059,6 +11075,7 @@ __metadata:
     eslint-config-next: 13.5.3
     eslint-config-prettier: ^8.8.0
     eslint-plugin-prettier: ^5.0.0
+    geist: ^1.0.0
     github-slugger: ^1.4.0
     gray-matter: ^4.0.2
     husky: ^8.0.0
