@@ -1,10 +1,10 @@
-import siteMetadata from '@/data/siteMetadata'
 import headerNavLinks from '@/data/headerNavLinks'
-import Logo from '@/data/logo.svg'
+import siteMetadata from '@/data/siteMetadata'
 import Link from './Link'
+import Logo from './Logo'
 import MobileNav from './MobileNav'
-import ThemeSwitch from './ThemeSwitch'
 import SearchButton from './SearchButton'
+import ThemeSwitch from './ThemeSwitch'
 
 const Header = () => {
   return (
@@ -16,7 +16,7 @@ const Header = () => {
               <Logo />
             </div>
             {typeof siteMetadata.headerTitle === 'string' ? (
-              <div className="hidden h-6 text-2xl font-semibold sm:block">
+              <div className="hidden h-6 text-3xl font-semibold sm:block">
                 {siteMetadata.headerTitle}
               </div>
             ) : (
