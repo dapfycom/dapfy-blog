@@ -1,9 +1,23 @@
-import { NewsletterAPI } from 'pliny/newsletter'
-import siteMetadata from '@/data/siteMetadata'
+import axios from 'axios'
 
-const handler = NewsletterAPI({
-  // @ts-ignore
-  provider: siteMetadata.newsletter.provider,
-})
+export const POST = async (req: Request) => {
+  console.log('POST REQUEST')
 
-export { handler as GET, handler as POST }
+  try {
+    const email = (await req.json()).email
+    const dapfyHost = process.env.DAPFY_URL_HOST
+    await axios.post(`${dapfyHost}/api/newsletter`, {
+      email: email,
+    })
+    return Response.json(
+      { message: 'success' },
+      {
+        status: 200,
+      }
+    )
+  } catch (error) {
+    return Response.json(error?.response?.data, {
+      status: 500,
+    })
+  }
+}

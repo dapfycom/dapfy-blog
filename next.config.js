@@ -69,14 +69,6 @@ module.exports = () => {
       domains: ['picsum.photos'],
     },
     basePath: '/blog',
-    async headers() {
-      return [
-        {
-          source: '/(.*)',
-          headers: securityHeaders,
-        },
-      ]
-    },
 
     webpack: (config, options) => {
       config.module.rules.push({

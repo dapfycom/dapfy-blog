@@ -9,6 +9,7 @@ import { GeistSans } from 'geist/font'
 import { Metadata } from 'next'
 import { Analytics, AnalyticsConfig } from 'pliny/analytics'
 import { SearchConfig, SearchProvider } from 'pliny/search'
+import { Toaster } from 'react-hot-toast'
 import { ThemeProviders } from './theme-providers'
 
 export const metadata: Metadata = {
@@ -90,6 +91,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 <Header />
                 <main className="mb-auto">{children}</main>
               </SearchProvider>
+              <Toaster position="top-right" />
               <Footer />
             </div>
           </SectionContainer>
